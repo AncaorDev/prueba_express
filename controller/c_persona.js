@@ -10,6 +10,16 @@ function getPersonas(req, res){
     });
 }
 
+function getPersonasFiltro(req, res){
+    var result = {};
+    m_persona.getPersonas(function(data){
+        result = data;
+        res.status(200).send(result);
+        console.log(result);
+    });
+}
+
+
 module.exports = {
     getPersonas
 }

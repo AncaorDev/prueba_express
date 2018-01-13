@@ -26,7 +26,7 @@ function getPersonasFiltro(respuesta){
                       fec_naci,
                       nro_documento
                  FROM persona
-                  WHERE nom_persona like  `;
+                  WHERE nom_persona like `;
     db.conection.any(sql)
     .then(function (data) {
         respuesta(data); 
