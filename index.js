@@ -1,5 +1,5 @@
 const pgp = require("pg-promise")();
-const db  = pgp("postgres://postgres:postgres@localhost:5430/smiledu?application_name=backend");
+const db  = pgp("postgres://postgres:postgres@localhost:5432/smiledu?application_name=backend");
 var  app  = require('./app');
 var  fs   = require('fs');
 var port = process.env.PORT || 3978;  

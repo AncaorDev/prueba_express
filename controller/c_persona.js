@@ -21,5 +21,5 @@ function getPersonasFiltro(req, res){
 
 
 module.exports = {
-    getPersonas
+    getPersonas,getPersonasFiltro
 }
