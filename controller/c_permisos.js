@@ -20,14 +20,22 @@ function getModulos(req, res){
 }
 
 function getPermisosbyIdModulo(req, res) {
-    m_permisos.getPermisosbyIdModulo(req.body,(data)=>{
+    var id_modulo = req.body.id_modulo;
+    m_permisos.getPermisosbyIdModulo(req.body, data => {
         res.status(200).send(data);
-    });
-    
+    });  
+}
+
+function updPermisobyId(req, res) {
+    var json_update = req.body;
+    m_permisos.updPermisobyId( json_update , data => {
+        res.status(200).send(data);
+    }); 
 }
 
 module.exports = {
     getPermisos,
     getModulos,
-    getPermisosbyIdModulo
+    getPermisosbyIdModulo,
+    updPermisobyId
 }
